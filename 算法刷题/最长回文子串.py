@@ -60,6 +60,13 @@ if i == j, dp[i][j] = True , 单个字符一定是回文数
 if i-j == 1,dp[i][j] = (pstring[i]==psting[j]) 相邻字符串，比较两个字符
 if i-j > 1,dp[i][j] = (pstring[i]==psting[j]) && (dp[i+1][j-1]) 长度大于1的字符串，根据两边界和子串判断
 '''
+'''
+控制子串的遍历过程有两种方法：
+1.控制首尾两点，长度由计算得到
+for i in range(n-1): for j in range(i+1,n):length=j-i
+2.控制首位和长度，尾点由计算得到
+for length in range(n): for i in range(n-length):j=i+length
+'''
 #不要使用dp = [[0]*n]*n 生成矩阵
 #重复操作符*,重复出来的各对象具有同一个id，也就是指向在内存中同一块地址，在对各个对象进行操作是一定要注意。
 def palindromedp(pstring):
