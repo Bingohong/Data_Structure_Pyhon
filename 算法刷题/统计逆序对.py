@@ -107,7 +107,7 @@ def mergeSort(alist):
         left = mergeSort(lefthalf)
         right = mergeSort(righthalf)
         
-        i = len(lefthalf) - 1 $ 指向左边最后位置
+        i = len(lefthalf) - 1 # 指向左边最后位置
         j = len(righthalf) - 1 # 指向右边最后位置
         ind = j + i + 1 # 指向原数组最后位置
         count = 0
