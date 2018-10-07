@@ -35,15 +35,27 @@ class binaryTree(object):
 root = binaryTree(1, None, None)
 
 left = binaryTree(2, None, None)
-right = binaryTree(3, None, None)
+#right = binaryTree(3, None, None)
 root.left = left
-root.right = right
+#root.right = right
 
 lleft = binaryTree(4, None, None)
 lright = binaryTree(5, None, None)
-rleft = binaryTree(6, None, None)
-rright = binaryTree(7, None, None)
+# rleft = binaryTree(6, None, None)
+# rright = binaryTree(7, None, None)
 left.left = lleft
 left.right = lright
-right.left = rleft
-right.right = rright
+# right.left = rleft
+# right.right = rright
+
+'''输出结果：
+root-value 4, left 0, right 0
+diff height 0
+root-value 5, left 0, right 0
+diff height 0
+root-value 2, left 1, right 1
+diff height 0
+root-value 1, left 2, right 0
+diff height 2
+(3, False)
+'''
