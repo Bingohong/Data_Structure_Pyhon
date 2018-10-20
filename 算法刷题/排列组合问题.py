@@ -65,6 +65,27 @@ def combination(pstring):
 		print("".join(s))
 		del s
 
-
+# 给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
+class Solution:
+    def combine(self, n, k):
+        """
+        :type n: int
+        :type k: int
+        :rtype: List[List[int]]
+        """
+        def getcombine(res, temp, start, num, n, k):
+            if num==k:
+                res.append(temp[:]) #做一次拷贝
+                return 
+            else:
+                for i in range(start,n):
+                    temp.append(i)
+                    getcombine(res, temp, i+1, num+1, n, k)
+                    temp.pop()
+                    
+        res = []
+        temp = []
+        getcombine(res, temp, 1, 0, n+1, k)
+        return res
 
 		
